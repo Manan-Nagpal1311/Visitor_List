@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+    <style>
+        .hero{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+        img{
+            /* position: relative; */
+            height: 500px;
+            
+        }
+       form{
+           display:flexbox;
+          
+       }
+       @media screen and (max-width: 750px) {
+           .hero {display: block};
+        }
+       body{
+        background-color: azure;
+        /* background-image: url('https://images-platform.99static.com/87YaQkIAAaDboDWSPyh6s97qh70=/274x0:1688x1414/500x500/top/smart/99designs-contests-attachments/59/59824/attachment_59824278');
+        background-repeat: no-repeat;
+
+        background-position-x: 800px;
+        background-position-y: 100px; */
+    }
+       
+
+        </style>
+</head>
+<body>
+    <div class="hero">
+        <form action="/userlist/<%=user._id%>?_method=PATCH" method="POST" >
+            <h1>Update User Details</h1>
+            <div class="form-group col-md-3  form-inline">
+            <label for="name"><i class="fas fa-user">&nbsp;&nbsp;</i></label>
+                <input type="text" for="name" class="form-control" id="name" name="name" placeholder="Name of Visitor" value="<%= user.name %>">
+            
+            </div>
+            <div class="form-group col-md-3  form-inline">
+            <label for="phone_number"><i class="fas fa-phone-square-alt">&nbsp;&nbsp;</i></label>
+            <input type="text"class="form-control"  name="phone_number" for="phone_number" placeholder="Phone Number" value="<%= user.phone_number%>">
+            </div>
+            <div class="form-group col-md-3  form-inline">
+            <label for="email" ><i class="fas fa-envelope">&nbsp;&nbsp;</i></label>
+            <input type="text" class="form-control" name="email" for="email" placeholder="Email" value="<%= user.email%>" required>
+            </div>
+            
+            <!-- <div class="form-group col-md-3  form-inline">
+            <label for="check_out" ><i class="fas fa-clock">&nbsp;&nbsp;</i></label>
+            <input type="text"class="form-control" name="check_out" for="check_out" placeholder="Check_Out_Time">
+            </div> -->
+            <div class="form-group col-md-3  form-inline">
+            <label for="address" ><i class="fas fa-map-marker-alt">&nbsp;&nbsp;</i></label>
+            <input type="text" class="form-control" name="address" for="address" placeholder="address" value="<%= user.address%>">
+            </div>
+            <div class="form-group col-md-3  form-inline">
+            <label for="date" ><i class="fas fa-calendar-alt">&nbsp;&nbsp;</i></label>
+            <input type="date" class="form-control" name="date" for="date" placeholder="date" value="<%= user.date%>"> 
+            </div>
+            
+            <!-- <button type="button" class="btn btn-primary btn-lg" type="submit">Check In</button> -->
+            <button class="btn btn-primary btn-lg" type="submit">Save Changes</button>
+        </form>
+        <img style="border-radius: 50%;" src="https://thumbs.dreamstime.com/b/data-update-vector-line-icon-linear-concept-outline-sign-symbol-data-update-vector-line-icon-outline-concept-linear-sign-147247766.jpg">
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

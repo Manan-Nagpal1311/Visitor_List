@@ -2,7 +2,7 @@
 // {
     require('dotenv').config();
 // }
-
+console.log(process.env.MONGO_URL);
 const express=require('express');
 const app=express();
 const mongoose=require('mongoose');
